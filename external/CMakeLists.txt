@@ -3,9 +3,9 @@ include(ExternalProject)
 set_property(DIRECTORY ${CMAKE_CURRENT_LIST_DIR} PROPERTY EP_PREFIX)
 
 #Eigen
-file(DOWNLOAD http://bitbucket.org/eigen/eigen/get/3.2.5.tar.gz
+file(DOWNLOAD https://gitlab.com/libeigen/eigen/-/archive/3.3.8/eigen-3.3.8.tar.gz
               ${CMAKE_CURRENT_SOURCE_DIR}/eigen.tar.gz
-     EXPECTED_MD5 8cc513ac6ec687117acadddfcacf551b
+     EXPECTED_MD5 dc352b8c98797c71470b58b52fa8a4ce
     )
 set(EIGEN_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/eigen)
 set(EIGEN_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/eigen)
@@ -86,9 +86,9 @@ ExternalProject_Add(
 #add_subdirectory(docopt)
 
 #Geographiclib
-file(DOWNLOAD http://heanet.dl.sourceforge.net/project/geographiclib/distrib/GeographicLib-1.44.tar.gz
+file(DOWNLOAD https://downloads.sourceforge.net/project/geographiclib/distrib/archive/GeographicLib-1.47.tar.gz
               ${CMAKE_CURRENT_SOURCE_DIR}/geographiclib.tar.gz
-     EXPECTED_MD5 212b1bf07b9b672aeae03f845f01e76b
+     EXPECTED_MD5 ca338891e872003c6ea5711ab901b065
     )
 set(GEOGRAPHICLIB_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/geographiclib)
 set(GEOGRAPHICLIB_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/geographiclib)
